@@ -5,9 +5,18 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [shareUrl] = useState()
+
+  function goLink() {
+    console.log(shareUrl)
+    // location.href = shareUrl
+    const kbocarex = '';
+    location.href = `intent://'+${kbocarex}+'#Intent;scheme=kbocarex;package=com.kb.ocare.app;end;`;
+  }
 
   return (
     <>
+      <div><a href="#" onClick={() => goLink}>share test</a></div>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
