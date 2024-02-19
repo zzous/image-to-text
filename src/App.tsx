@@ -5,18 +5,20 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const [shareUrl] = useState()
+  const [shareUrl] = useState('intent://webview?popupUri=%2Fwellness%2Fstp#Intent;scheme=kbocarex;package=com.kb.ocare.app;end;')
 
   function goLink() {
     console.log(shareUrl)
     // location.href = shareUrl
-    const kbocarex = 'webview?popupUri=%2Fwellness%2Fstp';
-    location.href = `intent://'+${kbocarex}+'#Intent;scheme=kbocarex;package=com.kb.ocare.app;end;`;
+
+    // const kbocarex = 'webview?popupUri=%2Fwellness%2Fstp';
+    location.href = shareUrl;
   }
 
   return (
     <>
       <div><a href="#" onClick={() => goLink}>share test</a></div>
+      <div>{shareUrl}</div>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
