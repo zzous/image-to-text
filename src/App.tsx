@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const [shareUrl] = useState('intent://webview?popupUri=%2Fwellness%2Fstp#Intent;scheme=kbocarex;package=com.kb.ocare.app;end;')
+  const [shareUrl] = useState('intent://webview?popupUri=/wellness/stp#Intent;scheme=kbocarex;package=com.kb.ocare.app;end;')
 
   function goLink() {
     console.log(shareUrl)
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      <div><a href="#" onClick={() => goLink}>share test</a></div>
+      <div><a href="#" onClick={() => goLink()}>share test</a></div>
       <div>{shareUrl}</div>
       <div>
         <a href="https://vitejs.dev" target="_blank">
