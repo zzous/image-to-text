@@ -10,7 +10,7 @@ function App() {
   function goLink() {
     console.log(shareUrl)
     // location.href = shareUrl
-    const kbocarex = '';
+    const kbocarex = 'webview?popupUri=%2Fwellness%2Fstp';
     location.href = `intent://'+${kbocarex}+'#Intent;scheme=kbocarex;package=com.kb.ocare.app;end;`;
   }
 
